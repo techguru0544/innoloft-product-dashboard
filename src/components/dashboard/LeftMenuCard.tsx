@@ -27,7 +27,7 @@ const LeftMenuCard = (props: LeftMenuCardPropsType) => {
     <div className="card border border-grey-card-border rounded p-6">
       <div className="flex items-center">
         <img src={productData?.user?.['profilePicture']} alt="Profile Avatar" className="w-16 h-16 rounded-full mr-4" />
-        <div className="text-blue-heading">
+        <div className="text-theme-color">
           <h2 className="text-lg font-semibold">
             {productData?.user?.['firstName']} {productData?.user?.['lastName']}
           </h2>

@@ -22,5 +22,18 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Fetch the color value from the API
+      fetch('https://api-test.innoloft.com/configuration/%VITE_APP_ID%/')
+        .then(response => response.json())
+        .then(data => {
+          // Once you have the color value, update the Tailwind CSS theme
+          const root = document.documentElement;
+          root.style.setProperty('--default-color', data.mainColor);
+        })
+        .catch(error => {
+          console.error('Error fetching color:', error);
+        });
+    </script>
   </body>
 </html>

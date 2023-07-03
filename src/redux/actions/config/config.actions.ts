@@ -1,7 +1,4 @@
-import {
-  SET_CONFIG_DATA,
-  SET_CONFIG_LOADER
-} from 'redux/reducers/config/app/app.slice';
+import { SET_CONFIG_DATA, SET_CONFIG_LOADER } from 'redux/reducers/config/app/app.slice';
 import { AppDispatch } from '../../store';
 import { BASE_URL } from 'helper/env';
 
@@ -11,6 +8,7 @@ const GET_CONFIGURATIONS = (configId: number) => {
     fetch(`${BASE_URL.CONFIGURATON}/${configId}/`)
       .then(response => response.json())
       .then(data => {
+        localStorage.setItem('themeColor', data?.mainColor);
         dispatch(SET_CONFIG_DATA(data));
       })
       .catch(configError => {

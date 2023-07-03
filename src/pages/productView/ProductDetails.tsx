@@ -90,7 +90,7 @@ const ProductDetails = () => {
                   src={productData?.['picture']}
                   alt={productData.name}
                 />
-                <div className="absolute top-0 left-0 bg-white text-blue-heading">
+                <div className="absolute top-0 left-0 bg-white text-theme-color">
                   {/* <img className="bg-theme text-sm font-medium inline" src={Images.InnoMessenger} /> */}
                   <span className="text-sm font-medium m-0">{productData?.type?.name}</span>
                 </div>
@@ -101,7 +101,7 @@ const ProductDetails = () => {
               </div>
             </div>
             <div className="p-5 flex flex-col gap-2.5">
-              <h3 className="text-blue-heading text-base font-semibold mb-2.5">Offered By</h3>
+              <h3 className="text-theme-color text-base font-semibold mb-2.5">Offered By</h3>
               <img
                 className="w-[200px] h-[37px]"
                 src={productData?.['company']?.['logo']}
@@ -141,13 +141,13 @@ const ProductDetails = () => {
           </div>
         </div>
         <div className="card border border-grey-card-border rounded mt-5 px-2.5 py-[30px] md:p-5">
-          <h3 className="mb-2.5">Video</h3>
+          <h3 className="mb-2.5 text-theme-color font-semibold">Video</h3>
           <div className="flex flex-col justify-center md:justify-start w-full h-[210px] md:w-[715px] md:h-[400px] mx-auto">
             <Video videoUrl={productData?.video} />
           </div>
         </div>
         <div className="card border border-grey-card-border rounded mt-5 p-2.5 md:p-5">
-          <h3 className="mb-5">Product Details</h3>
+          <h3 className="mb-5 text-theme-color font-semibold">Product Details</h3>
           <div className="grid md:grid-cols-2 gap-5">
             {productDetails?.map((detailsItem, index) => (
               <div className="flex items-start gap-1.5" key={index}>
