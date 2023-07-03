@@ -1,0 +1,15 @@
+.searchBar {
+  @apply bg-white w-[350px] lg:w-[500px] h-[27px] rounded flex items-center justify-between px-3;
+}
+
+.searchBar input {
+  @apply outline-0 focus-visible:outline-none w-full text-xs ml-0 my-1;
+}
+
+.breadcrumbArrow {
+  @apply h-2.5 w-1.5 mx-3;
+}
+
+.greySmallContent {
+  @apply text-grey-desc text-sm;
+}
