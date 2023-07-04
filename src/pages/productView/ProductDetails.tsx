@@ -66,16 +66,16 @@ const ProductDetails = () => {
   return loader ? (
     <LoadingSpinner />
   ) : (
-    <div className="md:container grid md:grid-cols-4 gap-[30px] px-2.5 md:px-0 my-5">
+    <div className="md:container grid lg:grid-cols-4 gap-[30px] px-2.5 lg:px-0 my-5">
       <div className="hidden md:block">
         <LeftMenuCard productData={productData} />
       </div>
       <div className="col-span-3">
-        <div className="flex items-center">
+        <div className="flex items-center justify-between flex-wrap gap-3">
           <Breadcrump linkName={productData?.['name'] ?? ''} />
           <Button
             disabled
-            customClass="ml-auto"
+            // customClass="ml-auto"
             name="Edit"
             value="Edit"
             handleOnClick={() => console.log({ productId })}
@@ -83,7 +83,7 @@ const ProductDetails = () => {
         </div>
         <div className="card border border-grey-card-border rounded mt-5">
           <div className="grid md:grid-cols-4">
-            <div className="col-span-3 border-r">
+            <div className="md:col-span-3 border-r">
               <div className="relative">
                 <img
                   className="w-[396px] h-[180px] md:w-[746px] md:h-[300px]"

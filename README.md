@@ -32,7 +32,7 @@ VITE_BACKEND_API_URL=https://api-test.innoloft.com/
 In the project directory, run below command into terminal:
 
 ```bash
-npm start
+npm run dev
 ```
 
 ## FYI

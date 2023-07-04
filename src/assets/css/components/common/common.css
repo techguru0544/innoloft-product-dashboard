@@ -1,5 +1,5 @@
 .searchBar {
-  @apply bg-white w-[350px] lg:w-[500px] h-[27px] rounded flex items-center justify-between px-3;
+  @apply bg-white w-full h-[27px] rounded flex items-center justify-between px-3;
 }
 
 .searchBar input {
